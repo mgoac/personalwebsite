@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mgoal@arch</title>
+  <meta
+    name="description"
+    content="programmer who likes learning new things — currently 3d modeling, microcontrollers, and how operating systems work."
+  />
+  <meta property="og:title" content="mgoal@arch" />
+  <meta
+    property="og:description"
+    content="programmer who likes learning new things — currently 3d modeling, microcontrollers, and how operating systems work."
+  />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%231793d1' d='M12 2 2 20h4l6-11 6 11h4L12 2zm0 8 4 10H8l4-10z'/></svg>"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="terminal">
+    <div class="titlebar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">user@arch: ~</span>
+    </div>
+
+    <div class="screen" id="screen">
+      <!-- fastfetch command gets "typed" here by script.js -->
+      <div class="prompt-line" id="boot-line"></div>
+
+      <!-- fastfetch output -->
+      <div class="fetch" id="fetch" hidden>
+        <pre class="logo" aria-hidden="true">                   <span class="c1">-</span><span class="c2">`</span>
+                  <span class="c1">.o+</span>
+                 <span class="c2">`ooo/</span>
+                <span class="c2">`+oooo:</span>
+               <span class="c1">`+oooooo:</span>
+               <span class="c1">-+oooooo+:</span>
+             <span class="c2">`/:-:++oooo+:</span>
+            <span class="c2">`/++++/+++++++:</span>
+           <span class="c2">`/++++++++++++++:</span>
+          <span class="c1">`/+++ooooooooooooo/</span>
+         <span class="c1">./ooosssso++osssssso+</span>
+        <span class="c1">.oossssso-````/ossssss+</span>
+       <span class="c1">-osssssso.      :ssssssso.</span>
+      <span class="c2">:osssssss/        osssso+++.</span>
+     <span class="c2">/ossssssss/        +ssssooo/-</span>
+   <span class="c2">`/ossssso+/:-        -:/+osssso+-</span>
+  <span class="c2">`+sso+:-`                 `.-/+oso:</span>
+ <span class="c3">`+++.                           `-/+/
+</span>`. <span class="c3">`</span></pre>
+
+        <div class="info">
+          <div class="hi">user<span class="fg-blue">@</span>arch</div>
+          <div class="hi-line">------------------</div>
+          <div id="info-lines"><!-- rows injected by script.js --></div>
+        </div>
+      </div>
+
+      <!-- interactive prompt appears here after fastfetch output -->
+      <div id="repl"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
