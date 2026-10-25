@@ -22,7 +22,10 @@ const WHOAMI = [
   "and how operating systems work.",
 ];
 
-const CONTACTS = [{ label: "discord", value: "@mgoal" }];
+const CONTACTS = [
+  { label: "discord", value: "@mgoa1" },
+  { label: "email", value: "lunaticcoral@proton.me" },
+];
 
 /* fake filesystem — `ls` lists the keys, `openfile <file>` prints the value.
  * Files listed in DENIED_FILES answer "permission denied" to openfile. */
@@ -199,7 +202,7 @@ function scheduleAmbientGlitch() {
 /* ---- commands available in the prompt ---- */
 const COMMANDS = {
   help: () =>
-    "available: whoami, ls, openfile, uptime, skills, interests, projects, contact, location, age, uname, clear\nusage openfile: openfile projects.log — type a command and see what happens, view all files with ls",
+    "available: whoami, ls, openfile, uptime, skills, interests, projects, contact, games, timezone, location, age, uname, clear\nusage openfile: openfile projects.log — type a command and see what happens, view all files with ls",
   whoami: () => WHOAMI.join(" "),
   uname: () => "Linux arch 6.12.7-arch1-1 x86_64",
   uptime: () => `up ${fmtUptime()}, 1 user, load average: 0.41, 0.35, 0.30`,
@@ -208,6 +211,8 @@ const COMMANDS = {
     (INFO.find((i) => i.key === "interests")?.value ?? []).join(", "),
   projects: () => "coming soon...",
   contact: () => CONTACTS.map((c) => `${c.label}: ${c.value}`).join(", "),
+  games: () => "red dead redemption 2, geometry dash",
+  timezone: () => "America/New_York",
   ls: () => Object.keys(FILES).join("  "),
   openfile: (file) => {
     if (!file) return "openfile: missing file operand";
@@ -218,7 +223,7 @@ const COMMANDS = {
   cd: () => "", /* cd goes nowhere — the terminal is the home */
   rm: () => "cannot remove '/': permission denied",
   /* commands rendered as OS-level permission errors */
-  location: () => "operation not permitted",
+  location: () => "North America",
   age: () => "operation not permitted (you'll have to find out)",
 };
 
