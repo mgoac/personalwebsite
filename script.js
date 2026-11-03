@@ -1,6 +1,4 @@
-/* =====================================================================
- *  1. YOUR INFO — edit everything in this block to add more lines.
- * ===================================================================== */
+
 const USER = "user";
 const HOST = "arch";
 
@@ -212,7 +210,7 @@ const COMMANDS = {
   projects: () => "coming soon...",
   contact: () => CONTACTS.map((c) => `${c.label}: ${c.value}`).join(", "),
   games: () => "red dead redemption 2, geometry dash",
-  timezone: () => "America/New_York",
+  timezone: () => "operation not permitted(check my profile)",
   ls: () => Object.keys(FILES).join("  "),
   openfile: (file) => {
     if (!file) return "openfile: missing file operand";
